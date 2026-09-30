@@ -1,0 +1,6 @@
+$ python -m EmotionDetection.test_emotion_detection
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+OK

@@ -1,4 +1,4 @@
-"""Flask web application for emotion detection."""
+"""Flask server for the emotion detection application."""
 
 from flask import Flask, jsonify, render_template, request
 
@@ -15,13 +15,10 @@ def root():
 
 @app.route("/emotionDetector", methods=["GET"])
 def emotion_detector_route():
-    """Detect emotions from text and return the result."""
+    """Detect emotions from the submitted text."""
     text_to_analyze = request.args.get("textToAnalyze")
 
     response = emotion_detector(text_to_analyze)
-
-    if response.get("dominant_emotion") is None:
-        return "Invalid text! Please try again!."
 
     return jsonify(response)
 
@@ -29,6 +26,5 @@ def emotion_detector_route():
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
-        port=5000,
-        debug=True
+        port=5000
     )

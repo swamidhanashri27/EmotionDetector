@@ -1,0 +1,5 @@
+$ python -c "from EmotionDetection.emotion_detection import emotion_detector; print('EmotionDetection package imported successfully')"
+EmotionDetection package imported successfully
+
+$ python -c "from unittest.mock import patch; from EmotionDetection.emotion_detection import emotion_detector; ... "
+{'anger': 0.9, 'disgust': 0.02, 'fear': 0.03, 'joy': 0.01, 'sadness': 0.04, 'dominant_emotion': 'anger'}
